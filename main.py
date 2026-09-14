@@ -1,10 +1,14 @@
 from platform import system
 import subprocess
+from pathlib import Path
 
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Container, Horizontal
 from textual.widgets import Button, Footer, Header, Label, RichLog, Select, Static
+
+
+ROOT_DIR = Path(__file__).resolve().parent
 
 
 class WebStaticyApp(App):
@@ -17,7 +21,7 @@ class WebStaticyApp(App):
     }
 
     #main {
-        width: q70;
+        width: 70;
         height: auto;
         border: round $accent;
         padding: 1 2;
@@ -100,7 +104,7 @@ class WebStaticyApp(App):
             return
 
         if current_system == "Darwin":
-            command = ["sh", "scripts/macos-brew.sh"]
+            command = ["sh", str(ROOT_DIR / "scripts/macos-brew.sh")]
 
         elif current_system == "Linux":
             distribution = self.query_one("#system", Select).value
@@ -110,8 +114,8 @@ class WebStaticyApp(App):
                 return
 
             scripts = {
-                "debian": "scripts/debian-apt.sh",
-                "arch": "scripts/arch-pacman.sh",
+                "debian": ROOT_DIR / "scripts/debian-apt.sh",
+                "arch": ROOT_DIR / "scripts/arch-pacman.sh",
             }
 
             script = scripts.get(str(distribution))
@@ -120,7 +124,7 @@ class WebStaticyApp(App):
                 self.set_status("Unsupported Linux distribution.")
                 return
 
-            command = ["sh", script]
+            command = ["sh", str(script)]
 
         else:
             self.set_status(f"{current_system} is not supported.")
@@ -130,7 +134,7 @@ class WebStaticyApp(App):
 
     def initialize_project(self) -> None:
         self.run_script(
-            ["sh", "scripts/project-init.sh"],
+            ["sh", str(ROOT_DIR / "scripts/project-init.sh")],
             "Project initialization finished.",
         )
 
