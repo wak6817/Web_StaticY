@@ -1,4 +1,4 @@
 #!/bin/sh
 
-sudo pacman -Sy
+sudo pacman -Syu
 sudo pacman -S python3

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
-import subprocess
+from pathlib import Path
 import sys
+import shutil
 
 
 SCHEMES = {
@@ -21,10 +22,46 @@ SCHEMES = {
 }
 
 VERSIONS = ["colorv", "modernv", "pixelv"]
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+SOURCE_ROOT = PROJECT_ROOT / "themes"
+OUTPUT_ROOT = PROJECT_ROOT / "build" / "dist"
 
 
 def build(script: str) -> None:
-    subprocess.run(["sh", script], check=False)
+    script_path = Path(script)
+    scheme = script_path.parts[-3]
+    version = script_path.stem.removeprefix("build-")
+    source = SOURCE_ROOT / "src" / scheme
+    output = OUTPUT_ROOT / scheme / version
+    output.mkdir(parents=True, exist_ok=True)
+
+    shared = [
+        source / "colorv" / "interactions.css",
+        source / "colorv" / "other.css",
+        source / "colorv" / "text.css",
+    ]
+    if version == "colorv":
+        files = shared + [source / "trans.css", source / "api.css", SOURCE_ROOT / "src" / "templates.css"]
+    else:
+        files = shared + [
+            source / version / "fonts.css",
+            source / version / "margins.css",
+            source / "trans.css",
+            source / "api.css",
+            SOURCE_ROOT / "src" / "templates.css",
+        ]
+
+    with (output / "style.css").open("w", encoding="utf-8") as destination:
+        for file in files:
+            destination.write(file.read_text(encoding="utf-8"))
+
+    if version != "colorv":
+        shutil.copy2(SOURCE_ROOT / "sounds" / version / "sound.js", output / "sound.js")
+        assets = output / "assets"
+        assets.mkdir(exist_ok=True)
+        shutil.copy2(SOURCE_ROOT / "sounds" / version / "clickbtn.wav", assets / "clickbtn.wav")
+        icons = assets / "icons"
+        shutil.copytree(SOURCE_ROOT / "icons", icons, dirs_exist_ok=True)
 
 
 def build_all() -> None:

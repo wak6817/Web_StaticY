@@ -90,6 +90,26 @@ th {
   --base: #eff1f5;
   --mantle: #e6e9ef;
   --crust: #dce0e8;
+}@import url("trans.css");
+
+.error {
+  color: var(--red);
+}
+
+.warning {
+  color: var(--peach);
+}
+
+.success {
+  color: var(--green);
+}
+
+.highlight {
+  color: var(--text);
+}
+
+.info {
+  color: var(--blue);
 }.background {
   /* assign this to your background */
   object-fit: cover;
