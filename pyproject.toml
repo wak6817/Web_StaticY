@@ -2,4 +2,8 @@
 name = "web-staticy"
 version = "0.1.0"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "pyqt6>=6.11.0",
+    "textual>=8.2.8",
+    "linkify-it-py>=2.2.0",
+]
