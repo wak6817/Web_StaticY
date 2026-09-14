@@ -104,7 +104,7 @@ class WebStaticyApp(App):
             return
 
         if current_system == "Darwin":
-            command = ["sh", str(ROOT_DIR / "scripts/macos-brew.sh")]
+            command = ["sh", str(ROOT_DIR / "scripts/download/macos-brew.sh")]
 
         elif current_system == "Linux":
             distribution = self.query_one("#system", Select).value
@@ -114,8 +114,8 @@ class WebStaticyApp(App):
                 return
 
             scripts = {
-                "debian": ROOT_DIR / "scripts/debian-apt.sh",
-                "arch": ROOT_DIR / "scripts/arch-pacman.sh",
+                "debian": ROOT_DIR / "scripts/download/debian-apt.sh",
+                "arch": ROOT_DIR / "scripts/download/arch-pacman.sh",
             }
 
             script = scripts.get(str(distribution))
