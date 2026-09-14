@@ -1,4 +1,4 @@
-@import url("trans.css");
+@import url("themes/cmocha/trans.css");
 
 .error {
   color: var(--red);
