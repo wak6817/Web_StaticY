@@ -1,21 +1,21 @@
 @font-face {
   font-family: "AdwaitaMono Nerd Font";
-  src: url("/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Regular.ttf");
+  src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Regular.ttf");
 }
 
 @font-face {
   font-family: "AdwaitaMono Nerd Font Bold";
-  src: url("/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Bold.ttf");
+  src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Bold.ttf");
 }
 
 @font-face {
   font-family: "AdwaitaMono Nerd Font Italic";
-  src: url("/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Italic.ttf");
+  src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Italic.ttf");
 }
 
 @font-face {
   font-family: "AdwaitaMono Nerd Font Bold Italic";
-  src: url("/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-BoldItalic.ttf");
+  src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-BoldItalic.ttf");
 }
 
 * {

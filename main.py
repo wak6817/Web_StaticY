@@ -2,8 +2,8 @@ from platform import system
 import subprocess
 
 def get_system():
-    yes = input("Download needed packages?")
-    if yes == "yes":
+    i = input("Download needed packages? (y/n)")
+    if i == "y":
         if system() == "Windows":
             print("System NOT supported, download WSL to run this in a Linux environment")
 
@@ -29,3 +29,9 @@ def get_system():
 
 if __name__ == "__main__":
     get_system()
+    i = input("Did you edit scripts/project-init.sh? (y/n)")
+
+    if i == "y":
+        subprocess.run(["sh", "scripts/project-init.sh"])
+    else:
+        print("Abort")
