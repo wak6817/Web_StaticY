@@ -1,0 +1,17 @@
+a:link {
+  color: var(--blue);
+}
+
+a:visited {
+  color: var(--mauve);
+}
+
+button, input, textarea, select, ul, ol {
+  color: var(--text);
+  background-color: var(--base);
+  border: 1px solid var(--mauve);
+}
+
+button:disabled {
+  background-color: var(--crust);
+}

@@ -1,0 +1,21 @@
+@import url("trans.css");
+
+.error {
+  color: var(--nord11);
+}
+
+.warning {
+  color: var(--nord12);
+}
+
+.success {
+  color: var(--nord14);
+}
+
+.highlight {
+  color: var(--nord5);
+}
+
+.info {
+  color: var(--nord10);
+}

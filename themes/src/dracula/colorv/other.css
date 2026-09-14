@@ -1,0 +1,7 @@
+body {
+  background-color: var(--background);
+}
+
+hr {
+  border-color: var(--pink);
+}

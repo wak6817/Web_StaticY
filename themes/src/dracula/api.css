@@ -1,0 +1,21 @@
+@import url("trans.css");
+
+.error {
+  color: var(--red);
+}
+
+.warning {
+  color: var(--orange);
+}
+
+.success {
+  color: var(--green);
+}
+
+.highlight {
+  color: var(--foreground);
+}
+
+.info {
+  color: var(--comment);
+}

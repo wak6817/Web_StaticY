@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "DepartureMono Nerd Font";
+  src: url("/fonts/DepartureMonoNerdFont/DepartureMonoNerdFont-Regular.otf");
+}
+
+@font-face {
+  font-family: "DepartureMono Nerd Font Mono";
+  src: url("/fonts/DepartureMonoNerdFont/DepartureMonoNerdFontMono-Regular.otf");
+}
+
+@font-face {
+  font-family: "DepartureMono Nerd Font Propo";
+  src: url("/fonts/DepartureMonoNerdFont/DepartureMonoNerdFontPropo-Regular.otf");
+}
+
+* {
+  font-family: "DepartureMono Nerd Font";
+}

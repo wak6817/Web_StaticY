@@ -1,0 +1,7 @@
+body {
+  background-color: var(--base);
+}
+
+hr {
+  border-color: var(--rosewater);
+}

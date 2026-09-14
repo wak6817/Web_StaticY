@@ -1,0 +1,32 @@
+h1, dt {
+  color: var(--foreground);
+}
+
+h2, h3, h4, h5, h6, dd, table, form, details {
+  color: var(--foreground);
+}
+
+p, blockquote, pre, ul, ol, summary {
+  color: var(--foreground);
+}
+
+mark {
+  color: var(--yellow);
+  opacity: 75%;
+}
+
+del {
+  color: var(--red);
+}
+
+strong {
+  color: var(--foreground);
+}
+
+code {
+  color: var(--green);
+}
+
+th {
+  color: var(--current-line);
+}
