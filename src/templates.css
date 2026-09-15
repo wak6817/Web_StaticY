@@ -1,5 +1,5 @@
 .background {
-  /* assign this to your background */
+  /* Assign this to your background */
   object-fit: cover;
   position: fixed;
 
@@ -14,12 +14,12 @@
   background: rgb(255 255 255 / 20%);
 
   backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); /* for Safari support */
+  -webkit-backdrop-filter: blur(1px); /* For Safari support */
 
-  /* define size and padding using inline CSS */
+  /* Define size and padding using inline CSS */
 }
 
 .top {
-  /* for simpler code */
+  /* For cleaner code */
   z-index: 1;
 }

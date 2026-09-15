@@ -1,0 +1,17 @@
+a:link {
+  color: var(--coment);
+}
+
+a:visited {
+  color: var(--purple);
+}
+
+button, input, textarea, select, ul, ol {
+  color: var(--foreground);
+  background-color: var(--background);
+  border: 1px solid var(--current-line);
+}
+
+button:disabled {
+  background-color: var(--selection);
+}

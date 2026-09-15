@@ -1,0 +1,21 @@
+@import url("themes/cmocha/trans.css");
+
+.error {
+  color: var(--red);
+}
+
+.warning {
+  color: var(--peach);
+}
+
+.success {
+  color: var(--green);
+}
+
+.highlight {
+  color: var(--text);
+}
+
+.info {
+  color: var(--blue);
+}
