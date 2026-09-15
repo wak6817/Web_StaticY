@@ -2,7 +2,6 @@
 <project version="4">
   <component name="MicroPythonTools">
     <option name="activeWebReplPresetId" value="4e29f87d-542a-4be8-8969-a4f113874823" />
-    <option name="pluginEnabled" value="true" />
     <option name="portName" />
     <option name="webReplPresets">
       <map>
