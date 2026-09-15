@@ -18,7 +18,7 @@ EOF
     echo "Generated README.md"
 
     # LICENSE
-    cat > LICENSE <<EOF
+    cat > LICENSE.md <<EOF
 MIT License
 
 Copyright (c) $YEAR $USERNAME
@@ -42,7 +42,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 EOF
 
-    echo "Generated LICENSE"
+    echo "Generated LICENSE.md"
 
     cat > .gitignore <<EOF
 .DS_Store
