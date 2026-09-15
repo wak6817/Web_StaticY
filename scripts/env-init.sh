@@ -1,10 +1,22 @@
 #!/bin/sh
-# V1
+#v2, for importing to tests/temp (use whole numbers when versioning)
 
 USERNAME="wak6817"
 YEAR=$(date +%Y)
 
-cat > LICENSE.md <<EOF
+printf "Are you running this script in the project directory? (y/n) "
+read -r answer
+
+if [ "$answer" = "y" ]; then
+    echo "Continue"
+
+    cat > README.md <<EOF #TODO: Write this tutorial and copy it to README.md
+This tutorial is not written yet...
+EOF
+
+  echo "Generated README.md"
+
+    cat > LICENSE <<EOF
 MIT License
 
 Copyright (c) $YEAR $USERNAME
@@ -28,21 +40,31 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 EOF
 
-echo "Generated LICENSE.md"
+    echo "Generated LICENSE.md"
 
-cat > .gitignore <<EOF
+    cat > .gitignore <<EOF
 .DS_Store
 EOF
 
-echo "Generated .gitignore"
+    echo "Generated .gitignore"
 
-mkdir -p src
-touch src/index.html
-touch src/style.css
-touch src/script.ts
+    mkdir -p src
 
-echo "Generated src/ and its files"
+    echo "Generated src/"
 
-mkdir -p assets/fonts assets/icons assets/sounds
+    mkdir -p assets/fonts assets/icons assets/sounds
+    echo "Generated assets/"
 
-echo "Generated assets/ and its folders"
+    mkdir -p scripts
+    echo "Generated scripts/"
+
+    mkdir -p page
+    touch page/index.html page/style.css page/script.js # We're gonna switch to Typescript later
+
+    mkdir -p dist
+    echo "Generated dist/"
+
+    printf "\nThis could take a few seconds!"
+else
+    echo "Abort"
+fi
