@@ -1,13 +1,6 @@
-#!/bin/sh
-# V1
-
-USERNAME="wak6817"
-YEAR=$(date +%Y)
-
-cat > LICENSE.md <<EOF
 MIT License
 
-Copyright (c) $YEAR $USERNAME
+Copyright (c) 2026 wak6817
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,23 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-EOF
-
-echo "Generated LICENSE.md"
-
-cat > .gitignore <<EOF
-.DS_Store
-EOF
-
-echo "Generated .gitignore"
-
-mkdir -p src
-touch src/index.html
-touch src/style.css
-touch src/script.ts
-
-echo "Generated src/ and its files"
-
-mkdir -p assets/fonts assets/icons assets/sounds
-
-echo "Generated assets/ and its folders"
