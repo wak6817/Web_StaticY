@@ -56,11 +56,11 @@ th {
   color: var(--sapphire);
 }@font-face {
   font-family: "AdwaitaMono Nerd Font";
-  src: url("/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Regular.ttf");
+  src: url("AdwaitaMonoNerdFont-Regular.ttf");
 }
 
 * {
-  font-family: "AdwaitaMono Nerd Font";
+  font-family: "AdwaitaMono Nerd Font", monospace;
 }
 * {
   border-radius: 15px;
