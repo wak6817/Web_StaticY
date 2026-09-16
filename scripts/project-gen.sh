@@ -1,5 +1,4 @@
 #!/bin/sh
-# v3, for importing to tests/temp (use whole numbers when versioning)
 
 USERNAME="wak6817"
 YEAR=$(date +%Y)
@@ -17,8 +16,7 @@ EOF
 
     echo "Generated README.md"
 
-    # LICENSE
-    cat > LICENSE <<EOF
+    cat > LICENSE.md <<EOF
 MIT License
 
 Copyright (c) $YEAR $USERNAME
@@ -53,11 +51,19 @@ EOF
     mkdir -p src
     echo "Generated src/"
 
-    mkdir -p assets/fonts assets/icons assets/sounds
+    mkdir -p assets/fonts assets/icons assets/soundsx
     echo "Generated assets/"
 
     mkdir -p scripts
     echo "Generated scripts/"
+
+    cat > scripts/run.sh <<EOF
+#!/bin/sh
+cp -R src assets scripts page dist/
+EOF
+
+  echo "Generated scripts/run.sh"
+
 
     mkdir -p page
     touch page/index.html page/style.css page/script.ts

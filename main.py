@@ -144,9 +144,7 @@ class WebStaticyApp(App):
         command: list[str],
         success_message: str,
     ) -> None:
-        output = self.query_one("#output", RichLog)
-
-        self.call_from_thread(output.write, f"$ {' '.join(command)}")
+        self.call_from_thread(self.write_output, f"$ {' '.join(command)}")
 
         try:
             result = subprocess.run(
@@ -164,10 +162,10 @@ class WebStaticyApp(App):
             return
 
         if result.stdout:
-            self.call_from_thread(output.write, result.stdout.rstrip())
+            self.call_from_thread(self.write_output, result.stdout.rstrip())
 
         if result.stderr:
-            self.call_from_thread(output.write, result.stderr.rstrip())
+            self.call_from_thread(self.write_output, result.stderr.rstrip())
 
         if result.returncode == 0:
             self.call_from_thread(self.set_status, success_message)
@@ -176,6 +174,9 @@ class WebStaticyApp(App):
                 self.set_status,
                 f"Setup failed with exit code {result.returncode}.",
             )
+
+    def write_output(self, message: str) -> None:
+        self.query_one("#output", RichLog).write(message)
 
     def set_status(self, message: str) -> None:
         self.query_one("#status", Static).update(message)
