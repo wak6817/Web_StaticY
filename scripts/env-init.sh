@@ -5,6 +5,20 @@ set -eu
 USERNAME="wak6817"
 YEAR=$(date +%Y)
 
+SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd -P)
+PROJECT_DIR=$(pwd -P)
+DESTINATION_ICON_DIR="$PROJECT_DIR/assets/icons"
+SOURCE_ICON_DIR=""
+SEARCH_DIR="$SCRIPT_DIR"
+
+while [ "$SEARCH_DIR" != "/" ]; do
+    if [ -d "$SEARCH_DIR/assets/icons" ]; then
+        SOURCE_ICON_DIR="$SEARCH_DIR/assets/icons"
+        break
+    fi
+    SEARCH_DIR=$(dirname -- "$SEARCH_DIR")
+done
+
 printf '%s' "Are you running this script in the project directory? (y/n) "
 if ! read -r answer; then
     printf '%s\n' "Could not read confirmation." >&2
@@ -136,6 +150,20 @@ EOF
     mkdir -p assets/fonts assets/icons assets/sounds
     echo "Generated assets/"
 
+    if [ -n "$SOURCE_ICON_DIR" ] && [ -d "$SOURCE_ICON_DIR" ]; then
+        SOURCE_ICON_PATH=$(cd -- "$SOURCE_ICON_DIR" && pwd -P)
+        DESTINATION_ICON_PATH=$(cd -- "$DESTINATION_ICON_DIR" && pwd -P)
+
+        if [ "$SOURCE_ICON_PATH" = "$DESTINATION_ICON_PATH" ]; then
+            echo "Icons already exist in the project directory"
+        else
+            cp -R "$SOURCE_ICON_PATH"/. "$DESTINATION_ICON_PATH"/
+            echo "Copied icons"
+        fi
+    else
+        echo "Warning: source icons were not found; continuing without copying icons."
+    fi
+
     mkdir -p scripts
     echo "Generated scripts/"
 
@@ -145,10 +173,7 @@ set -eu
 cp -R src assets scripts page dist/
 EOF
 
-    chmod +x scripts/run.sh
-
-  echo "Generated scripts/run.sh"
-
+    echo "Generated scripts/run.sh"
 
     mkdir -p page
     touch page/index.html page/style.css page/script.ts
