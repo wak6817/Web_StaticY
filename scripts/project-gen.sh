@@ -1,22 +1,104 @@
 #!/bin/sh
 
+set -eu
+
 USERNAME="wak6817"
 YEAR=$(date +%Y)
 
-printf "Are you running this script in the project directory? (y/n) "
-read -r answer
+printf '%s' "Are you running this script in the project directory? (y/n) "
+if ! read -r answer; then
+    printf '%s\n' "Could not read confirmation." >&2
+    exit 1
+fi
 
-if [ "$answer" = "y" ]; then
+if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     echo "Continue"
 
-    #TODO: Write this tutorial and copy it to README.md
-    cat > README.md <<EOF
-This tutorial is not written yet...
+    cat > README.md <<'EOF'
+# THIS README.MD IS GENERATED
+
+This project is a small starting point for building a static website with HTML, CSS, and TypeScript.
+
+## Project structure
+
+- `page/` contains the website files that visitors open in a browser.
+- `page/index.html` is the homepage.
+- `page/style.css` contains the page styles.
+- `page/script.ts` is where interactive TypeScript code can be added.
+- `src/` contains source files shared by the project.
+- `assets/` stores fonts, icons, and other static resources.
+- `scripts/` stores helper shell scripts.
+- `dist/` is the destination for a published copy of the project.
+
+## Start editing
+
+Open `page/index.html` and add the structure of your page. For example:
+
+```html
+<main>
+    <h1>Hello, web!</h1>
+    <p>This is my first generated page.</p>
+</main>
+```
+
+Add the appearance in `page/style.css`:
+
+```css
+body {
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+```
+
+## Preview the website
+
+From the project directory, start a local web server:
+
+```sh
+python -m http.server --directory page
+```
+
+Open `http://localhost:8000` in a browser. Stop the server with `Ctrl+C`.
+
+## Add TypeScript
+
+TypeScript source belongs in `page/script.ts`. Browsers do not run TypeScript directly, so compile it to JavaScript before using it in a page. The generated project installs TypeScript with npm; add a `tsconfig.json` and a build command when the project needs a repeatable TypeScript workflow.
+
+Keep the generated source files in `page/` and copy the finished website to `dist/` only when you are ready to publish it.
+
+## Copy files to `dist/`
+
+The helper script is `scripts/run.sh`. Make it executable once, then run it from the project directory:
+
+```sh
+chmod +x scripts/run.sh
+./scripts/run.sh
+```
+
+Review the contents of `dist/` after copying. Do not publish source files or local configuration accidentally.
+
+## Version control
+
+Initialize Git if this is a new project:
+
+```sh
+git init
+git add .
+git commit -m "Start generated website"
+```
+
+The generated `.gitignore` excludes macOS `.DS_Store` files. Add other machine-specific files if your editor or operating system creates them.
+
+## Next steps
+
+Try adding navigation, a second HTML page, responsive styles, and a small TypeScript interaction. Keep the site accessible by using semantic HTML, descriptive link text, keyboard-friendly controls, and readable color contrast.
 EOF
 
     echo "Generated README.md"
 
-    cat > LICENSE.md <<EOF
+    cat > LICENSE <<EOF
 MIT License
 
 Copyright (c) $YEAR $USERNAME
@@ -51,16 +133,19 @@ EOF
     mkdir -p src
     echo "Generated src/"
 
-    mkdir -p assets/fonts assets/icons assets/soundsx
+    mkdir -p assets/fonts assets/icons assets/sounds
     echo "Generated assets/"
 
     mkdir -p scripts
     echo "Generated scripts/"
 
-    cat > scripts/run.sh <<EOF
+    cat > scripts/run.sh <<'EOF'
 #!/bin/sh
+set -eu
 cp -R src assets scripts page dist/
 EOF
+
+    chmod +x scripts/run.sh
 
   echo "Generated scripts/run.sh"
 
@@ -84,5 +169,5 @@ EOF
 
     printf "\nThis could take a few seconds!\n"
 else
-    echo "Abort"
+    printf '%s\n' "Abort"
 fi
