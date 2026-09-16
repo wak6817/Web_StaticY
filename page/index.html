@@ -4,53 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="style.css">
     <script src="sound.ts"></script>
+
     <title>Web_StaticY</title>
+
     <style>
+        html,
         body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 50%;
+            margin: 0 auto;
             text-align: center;
         }
+
+        pre {
+            white-space: pre-wrap;
+            overflow-wrap: break-word;
+        }
     </style>
+
     <script
-            data-goatcounter="https://wak6817.goatcounter.com/count"
-            async
-            src="//gc.zgo.at/count.js">
+        data-goatcounter="https://wak6817.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js">
     </script>
 </head>
+
 <body>
+
 <header>
     <h1>Web_StaticY</h1>
+
     <nav>
         <a href="#tutorial">Tutorial</a>
-        <a href="#about">About</a>
+        <a href="#license">About</a>
     </nav>
 </header>
+
 <hr>
+
 <main>
+
     <div id="tutorial">
+        <h1>Tutorial:</h1>
+
         <pre>
 Web_StaticY is a small static-web project and theme toolkit. It contains a browser page, reusable CSS themes, local assets, and helper tools for browsing and exporting color palettes.
 
 <b>What is included</b>
 
-- <code>page/</code> — the current static website entry point and page assets.
-- <code>src/themes/</code> — theme source files, including Catppuccin variants, Dracula, Nord, and Alucard.
-- <code>src/templates.css</code> — shared template styles.
-- <code>assets/</code> — fonts and icons used by the project.
-- <code>scripts/colorpicker.py</code> — a PyQt6 desktop palette browser.
-- <code>scripts/export.py</code> and <code>scripts/import.py</code> — early theme import/export helpers.
-- <code>scripts/build/</code> — build-script work in progress.
-- <code>tests/themes/</code> — HTML pages for manually inspecting theme components.
-- <code>main.py</code> — a Textual setup interface for platform/package setup.
+<code>page/</code> — the current static website entry point and page assets.
+<code>src/themes/</code> — theme source files, including Catppuccin variants, Dracula, Nord, and Alucard.
+<code>src/templates.css</code> — shared template styles.
+<code>assets/</code> — fonts and icons used by the project.
+<code>scripts/colorpicker.py</code> — a PyQt6 desktop palette browser.
+<code>scripts/export.py</code> and <code>scripts/import.py</code> — early theme import/export helpers.
+<code>scripts/build/</code> — build-script work in progress.
+<code>tests/themes/</code> — HTML pages for manually inspecting theme components.
+<code>main.py</code> — a Textual setup interface for platform/package setup.
 
 <b>Requirements</b>
 
-- Python 3.14.7 or newer
-- Node.js and npm for TypeScript tooling
-- A POSIX-compatible shell for the shell scripts
-- PyQt6 to run the color picker script
-- Textual to run the setup interface
+Python 3.14.7 or newer
+Node.js and npm for TypeScript tooling
+A POSIX-compatible shell for the shell scripts
+PyQt6 to run the color picker script
+Textual to run the setup interface
 
 On Windows, use WSL or another POSIX-compatible environment for the shell scripts.
 
@@ -115,7 +140,7 @@ colorv/other.css
 colorv/text.css
 </code>
 
-Keep names lowercase and consistent with the existing theme directories. Check the result in the relevant pages under <code>tests/themes/<code>, and update the documentation when adding a new supported workflow.
+Keep names lowercase and consistent with the existing theme directories. Check the result in the relevant pages under <code>tests/themes/</code>, and update the documentation when adding a new supported workflow.
 
 <b>Project status</b>
 
@@ -123,14 +148,15 @@ This project is actively being organized. Some setup, build, and import/export h
 
 <b>Contributing</b>
 
-Bug reports, theme improvements, documentation fixes, and small focused features are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+Bug reports, theme improvements, documentation fixes, and small focused features are welcome. Read <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> before opening a pull request.
 
 <b>License</b>
 
 This project is distributed under the MIT License.
         </pre>
     </div>
-    <div id="about">
+
+    <div id="license">
         <pre style="font-family: 'Times New Roman', monospace">
 MIT License
 
@@ -155,7 +181,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
         </pre>
     </div>
+
 </main>
+
 <footer>
     <p>
         This website uses the
@@ -163,8 +191,11 @@ SOFTWARE.
             Colorscheme-Webify
         </a>
         Catppuccin Mocha theme made by
-        <a href="https://github.com/wak6817">me</a>!
+        <a href="https://github.com/wak6817">
+            me
+        </a>!
     </p>
 </footer>
+
 </body>
 </html>

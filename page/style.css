@@ -1,11 +1,9 @@
-#about {
+#license {
     border: 2px dotted var(--yellow);
     width: fit-content;
     padding: 10px;
     margin: 0 auto;
 }
-
-/* Generated */
 
 a:link {
   color: var(--blue);
@@ -15,53 +13,26 @@ a:visited {
   color: var(--mauve);
 }
 
-button, input, textarea, select, ul, ol {
-  color: var(--text);
-  background-color: var(--base);
-  border: 1px solid var(--mauve);
-}
-
-button:disabled {
-  background-color: var(--crust);
-}body {
+body {
   background-color: var(--base);
 }
 
 hr {
   border-color: var(--rosewater);
 }
-h1, dt {
+h1 {
   color: var(--text);
 }
 
-h2, h3, h4, h5, h6, dd, table, form, details {
-  color: var(--subtext1);
-}
-
-p, blockquote, pre, ul, ol, summary {
+p, pre {
   color: var(--subtext0);
-}
-
-mark {
-  color: var(--yellow);
-  opacity: 75%;
-}
-
-del {
-  color: var(--red);
-}
-
-strong {
-  color: var(--text);
 }
 
 code {
   color: var(--green);
 }
 
-th {
-  color: var(--sapphire);
-}@font-face {
+@font-face {
   font-family: "AdwaitaMono Nerd Font";
   src: url("AdwaitaMonoNerdFont-Regular.ttf");
 }
@@ -69,9 +40,12 @@ th {
 * {
   font-family: "AdwaitaMono Nerd Font", monospace;
 }
+
 * {
   border-radius: 15px;
-}:root {
+}
+
+:root {
   --rosewater: #f5e0dc;
   --flamingo: #f2cdcd;
   --pink: #f5c2e7;
@@ -99,48 +73,4 @@ th {
   --base: #1e1e2e;
   --mantle: #181825;
   --crust: #11111b;
-}
-
-.error {
-  color: var(--red);
-}
-
-.warning {
-  color: var(--peach);
-}
-
-.success {
-  color: var(--green);
-}
-
-.highlight {
-  color: var(--text);
-}
-
-.info {
-  color: var(--blue);
-}.background {
-  /* assign this to your background */
-  object-fit: cover;
-  position: fixed;
-
-  z-index: -1;
-  inset: 0;
-}
-
-.blur {
-  position: relative;
-  z-index: 1;
-
-  background: rgb(255 255 255 / 20%);
-
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); /* for Safari support */
-
-  /* define size and padding using inline CSS */
-}
-
-.top {
-  /* for simpler code */
-  z-index: 1;
 }
