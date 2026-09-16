@@ -1,4 +1,4 @@
-const buttonSfx = new Audio("./clickbtn.wav");
+const buttonSfx = new Audio("clickbtn.wav");
 
 document.addEventListener("click", (event: MouseEvent) => {
     const target = event.target;

@@ -1,4 +1,11 @@
-/* Don't edit this file */
+#about {
+    border: 2px dotted var(--yellow);
+    width: fit-content;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+/* Generated */
 
 a:link {
   color: var(--blue);
@@ -92,7 +99,7 @@ th {
   --base: #1e1e2e;
   --mantle: #181825;
   --crust: #11111b;
-}@import url("trans.css");
+}
 
 .error {
   color: var(--red);

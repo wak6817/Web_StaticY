@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <script src="sound.ts"></script>
     <title>Web_StaticY</title>
     <style>
         body {
@@ -21,13 +22,139 @@
 <header>
     <h1>Web_StaticY</h1>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="pages/tutorial.html">Tutorial</a>
-        <a href="pages/about.html">About</a>
+        <a href="#tutorial">Tutorial</a>
+        <a href="#about">About</a>
     </nav>
 </header>
 <hr>
 <main>
+    <div id="tutorial">
+        <pre>
+Web_StaticY is a small static-web project and theme toolkit. It contains a browser page, reusable CSS themes, local assets, and helper tools for browsing and exporting color palettes.
+
+<b>What is included</b>
+
+- <code>page/</code> — the current static website entry point and page assets.
+- <code>src/themes/</code> — theme source files, including Catppuccin variants, Dracula, Nord, and Alucard.
+- <code>src/templates.css</code> — shared template styles.
+- <code>assets/</code> — fonts and icons used by the project.
+- <code>scripts/colorpicker.py</code> — a PyQt6 desktop palette browser.
+- <code>scripts/export.py</code> and <code>scripts/import.py</code> — early theme import/export helpers.
+- <code>scripts/build/</code> — build-script work in progress.
+- <code>tests/themes/</code> — HTML pages for manually inspecting theme components.
+- <code>main.py</code> — a Textual setup interface for platform/package setup.
+
+<b>Requirements</b>
+
+- Python 3.14.7 or newer
+- Node.js and npm for TypeScript tooling
+- A POSIX-compatible shell for the shell scripts
+- PyQt6 to run the color picker script
+- Textual to run the setup interface
+
+On Windows, use WSL or another POSIX-compatible environment for the shell scripts.
+
+<b>Getting started</b>
+
+Clone the repository and enter its directory:
+
+<code>
+git clone https://github.com/wak6817/Web_StaticY.git
+cd Web_StaticY
+</code>
+
+Create or activate a Python environment, then install the Python dependencies with your preferred package manager. The project metadata lists Textual as a runtime dependency; install PyQt6 as well if you want to use the color picker.
+
+Install the JavaScript dependency:
+
+<code>
+npm install
+</code>
+
+To preview the site, open <code>page/index.html</code> in a browser or serve the repository with a local static server. For example:
+
+<code>
+python -m http.server --directory page
+</code>
+
+<b>Useful commands</b>
+
+Run the Textual setup interface:
+
+<code>
+python main.py
+</code>
+
+Run the palette browser:
+
+<code>
+python scripts/colorpicker.py
+</code>
+
+Check the TypeScript configuration without emitting files:
+
+<code>
+npx tsc --noEmit
+</code>
+
+The theme inspection pages in <code>tests/themes/</code> can be opened in a browser to check API, icon, interaction, template, and text styles. The scripts in <code>scripts/build/</code> are present but still under development; verify their output before publishing a build.
+
+<b>Adding or editing a theme</b>
+
+Theme sources live in <code>src/themes/theme-name/</code>. A complete theme currently contains:
+
+<code>
+trans.css
+api.css
+modernv/fonts.css
+modernv/margins.css
+pixelv/fonts.css
+pixelv/margins.css
+colorv/interactions.css
+colorv/other.css
+colorv/text.css
+</code>
+
+Keep names lowercase and consistent with the existing theme directories. Check the result in the relevant pages under <code>tests/themes/<code>, and update the documentation when adding a new supported workflow.
+
+<b>Project status</b>
+
+This project is actively being organized. Some setup, build, and import/export helpers are prototypes rather than a stable release pipeline. If a command does not work as expected, please include the command, operating system, and full error output in an issue.
+
+<b>Contributing</b>
+
+Bug reports, theme improvements, documentation fixes, and small focused features are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+
+<b>License</b>
+
+This project is distributed under the MIT License.
+        </pre>
+    </div>
+    <div id="about">
+        <pre style="font-family: 'Times New Roman', monospace">
+MIT License
+
+Copyright (c) 2026 wak6817
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+        </pre>
+    </div>
 </main>
 <footer>
     <p>
