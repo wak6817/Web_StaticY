@@ -1,8 +1,17 @@
 #!/bin/sh
 
+# Use printf for input
+
 set -eu
 
-USERNAME="wak6817"
+printf '%s' "What is your username? "
+if ! read -r answer; then
+  printf '%s\n' "Could not read username" >&2
+  exit 1
+fi
+
+USERNAME=$answer
+
 YEAR=$(date +%Y)
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd -P)
@@ -21,7 +30,7 @@ done
 
 printf '%s' "Are you running this script in the project directory? (y/n) "
 if ! read -r answer; then
-    printf '%s\n' "Could not read confirmation." >&2
+    printf '%s\n' "Could not read confirmation" >&2
     exit 1
 fi
 
