@@ -56,7 +56,7 @@ class WebStaticyApp(App):
         yield Header()
 
         with Container(id="main"):
-            yield Label("Web StaticY setup")
+            yield Label("Web_StaticY setup")
             yield Static(
                 "Choose your operating system, then run the setup steps."
             )
@@ -134,8 +134,8 @@ class WebStaticyApp(App):
 
     def initialize_project(self) -> None:
         self.run_script(
-            ["sh", str(ROOT_DIR / "scripts/project-init.sh")],
-            "Project initialization finished.",
+            ["sh", str(ROOT_DIR / "scripts/env-init.sh")],
+            "Environment initialization finished.",
         )
 
     @work(thread=True)
