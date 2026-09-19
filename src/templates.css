@@ -1,25 +1,25 @@
 .background {
-  /* Assign this to your background */
-  object-fit: cover;
-  position: fixed;
+    /* Assign this to your background */
+    object-fit: cover;
+    position: fixed;
 
-  z-index: -1;
-  inset: 0;
+    z-index: -1;
+    inset: 0;
 }
 
 .blur {
-  position: relative;
-  z-index: 1;
+    position: relative;
+    z-index: 1;
 
-  background: rgb(255 255 255 / 20%);
+    background: rgb(255 255 255 / 20%);
 
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px); /* For Safari support */
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px); /* For Safari support */
 
-  /* Define size and padding using inline CSS */
+    /* Define size and padding using inline CSS */
 }
 
 .top {
-  /* For cleaner code */
-  z-index: 1;
+    /* For cleaner code */
+    z-index: 1;
 }

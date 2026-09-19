@@ -3,6 +3,7 @@
 import shutil
 import sys
 
+
 def read_path(prompt: str) -> str:
     return input(prompt).strip()
 

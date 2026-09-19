@@ -1,7 +1,7 @@
 body {
-  background-color: var(--background);
+    background-color: var(--background);
 }
 
 hr {
-  border-color: var(--pink);
+    border-color: var(--pink);
 }

@@ -1,21 +1,21 @@
 @import url("themes/dracula/trans.css");
 
 .error {
-  color: var(--red);
+    color: var(--red);
 }
 
 .warning {
-  color: var(--orange);
+    color: var(--orange);
 }
 
 .success {
-  color: var(--green);
+    color: var(--green);
 }
 
 .highlight {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 .info {
-  color: var(--comment);
+    color: var(--comment);
 }

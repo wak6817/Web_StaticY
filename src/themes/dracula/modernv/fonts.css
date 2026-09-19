@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "AdwaitaMono Nerd Font";
-  src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Regular.ttf");
+    font-family: "AdwaitaMono Nerd Font";
+    src: url("/assets/fonts/AdwaitaMonoNerdFont/AdwaitaMonoNerdFont-Regular.ttf");
 }
 
 * {
-  font-family: "AdwaitaMono Nerd Font";
+    font-family: "AdwaitaMono Nerd Font";
 }

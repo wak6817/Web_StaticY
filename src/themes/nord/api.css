@@ -1,21 +1,21 @@
 @import url("themes/nord/trans.css");
 
 .error {
-  color: var(--nord11);
+    color: var(--nord11);
 }
 
 .warning {
-  color: var(--nord12);
+    color: var(--nord12);
 }
 
 .success {
-  color: var(--nord14);
+    color: var(--nord14);
 }
 
 .highlight {
-  color: var(--nord5);
+    color: var(--nord5);
 }
 
 .info {
-  color: var(--nord10);
+    color: var(--nord10);
 }

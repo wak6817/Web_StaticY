@@ -1,17 +1,17 @@
 a:link {
-  color: var(--nord9);
+    color: var(--nord9);
 }
 
 a:visited {
-  color: var(--nord15);
+    color: var(--nord15);
 }
 
 button, input, textarea, select, ul, ol {
-  color: var(--nord5);
-  background-color: var(--nord1);
-  border: 1px solid var(--nord15);
+    color: var(--nord5);
+    background-color: var(--nord1);
+    border: 1px solid var(--nord15);
 }
 
 button:disabled {
-  background-color: var(--nord0);
+    background-color: var(--nord0);
 }

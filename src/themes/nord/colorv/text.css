@@ -1,32 +1,32 @@
 h1, dt {
-  color: var(--nord6);
+    color: var(--nord6);
 }
 
 h2, h3, h4, h5, h6, dd, table, form, details {
-  color: var(--nord5);
+    color: var(--nord5);
 }
 
 p, blockquote, pre, ul, ol, summary {
-  color: var(--nord4);
+    color: var(--nord4);
 }
 
 mark {
-  color: var(--nord13);
-  opacity: 75%;
+    color: var(--nord13);
+    opacity: 75%;
 }
 
 del {
-  color: var(--nord11);
+    color: var(--nord11);
 }
 
 strong {
-  color: var(--nord6);
+    color: var(--nord6);
 }
 
 code {
-  color: var(--nord14);
+    color: var(--nord14);
 }
 
 th {
-  color: var(--nord10);
+    color: var(--nord10);
 }

@@ -1,12 +1,11 @@
-from platform import system
 import subprocess
 from pathlib import Path
+from platform import system
 
 from textual import work
 from textual.app import App, ComposeResult
 from textual.containers import Container, Horizontal
 from textual.widgets import Button, Footer, Header, Label, RichLog, Select, Static
-
 
 ROOT_DIR = Path(__file__).resolve().parent
 
@@ -140,9 +139,9 @@ class WebStaticyApp(App):
 
     @work(thread=True)
     def run_script(
-        self,
-        command: list[str],
-        success_message: str,
+            self,
+            command: list[str],
+            success_message: str,
     ) -> None:
         self.call_from_thread(self.write_output, f"$ {' '.join(command)}")
 

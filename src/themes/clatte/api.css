@@ -1,21 +1,21 @@
 @import url("themes/clatte/trans.css");
 
 .error {
-  color: var(--red);
+    color: var(--red);
 }
 
 .warning {
-  color: var(--peach);
+    color: var(--peach);
 }
 
 .success {
-  color: var(--green);
+    color: var(--green);
 }
 
 .highlight {
-  color: var(--text);
+    color: var(--text);
 }
 
 .info {
-  color: var(--blue);
+    color: var(--blue);
 }

@@ -1,6 +1,7 @@
 # Contributing to Web_StaticY
 
-Thanks for helping improve Web_StaticY. Contributions can include bug reports, documentation, theme files, accessibility improvements, and focused code changes.
+Thanks for helping improve Web_StaticY. Contributions can include bug reports, documentation, theme files, accessibility
+improvements, and focused code changes.
 
 ## Before you start
 
@@ -16,7 +17,8 @@ Use Python 3.14.7 or newer and a POSIX-compatible shell. From the repository roo
 npm install
 ```
 
-Install the Python dependencies declared in `pyproject.toml`. Install PyQt6 separately when working on `scripts/colorpicker.py`.
+Install the Python dependencies declared in `pyproject.toml`. Install PyQt6 separately when working on
+`scripts/colorpicker.py`.
 
 Run the relevant checks before submitting a change:
 
@@ -25,7 +27,8 @@ npx tsc --noEmit
 python -m compileall main.py scripts
 ```
 
-For UI or website changes, also open `page/index.html` and the relevant pages in `tests/themes/` in a browser. For palette-browser changes, run:
+For UI or website changes, also open `page/index.html` and the relevant pages in `tests/themes/` in a browser. For
+palette-browser changes, run:
 
 ```sh
 python scripts/colorpicker.py
@@ -37,7 +40,8 @@ python scripts/colorpicker.py
 - Keep theme directories structurally consistent. A theme should provide the files listed in the README.
 - Use clear, descriptive names and preserve the existing lowercase theme naming style.
 - Keep scripts safe to run from any working directory by resolving paths from the project location.
-- Do not commit local virtual environments, caches, editor settings, or generated build output unless the change explicitly requires it.
+- Do not commit local virtual environments, caches, editor settings, or generated build output unless the change
+  explicitly requires it.
 - Update `README.md` when a command, directory, or supported workflow changes.
 
 ## Commits and pull requests
@@ -53,4 +57,5 @@ Keep pull requests reviewable and include screenshots for visible website or UI 
 
 ## Reporting bugs
 
-Please include the operating system, Python and Node.js versions, the exact command or interaction that failed, and the complete error output. A small reproduction or affected file path makes diagnosis much faster.
+Please include the operating system, Python and Node.js versions, the exact command or interaction that failed, and the
+complete error output. A small reproduction or affected file path makes diagnosis much faster.

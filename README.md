@@ -1,6 +1,7 @@
 # Web StaticY
 
-Web StaticY is a small static-web project and theme toolkit. It contains a browser page, reusable CSS themes, local assets, and helper tools for browsing and exporting color palettes.
+Web StaticY is a small static-web project and theme toolkit. It contains a browser page, reusable CSS themes, local
+assets, and helper tools for browsing and exporting color palettes.
 
 ## What is included
 
@@ -33,7 +34,8 @@ git clone https://github.com/wak6817/Web_StaticY.git
 cd Web_StaticY
 ```
 
-Create or activate a Python environment, then install the Python dependencies with your preferred package manager. The project metadata lists Textual as a runtime dependency; install PyQt6 as well if you want to use the color picker.
+Create or activate a Python environment, then install the Python dependencies with your preferred package manager. The
+project metadata lists Textual as a runtime dependency; install PyQt6 as well if you want to use the color picker.
 
 Install the JavaScript dependency:
 
@@ -41,7 +43,8 @@ Install the JavaScript dependency:
 npm install
 ```
 
-To preview the site, open `page/index.html` in a browser or serve the repository with a local static server. For example:
+To preview the site, open `page/index.html` in a browser or serve the repository with a local static server. For
+example:
 
 ```sh
 python -m http.server --directory page
@@ -67,7 +70,9 @@ Check the TypeScript configuration without emitting files:
 npx tsc --noEmit
 ```
 
-The theme inspection pages in `tests/themes/` can be opened in a browser to check API, icon, interaction, template, and text styles. The scripts in `scripts/build/` are present but still under development; verify their output before publishing a build.
+The theme inspection pages in `tests/themes/` can be opened in a browser to check API, icon, interaction, template, and
+text styles. The scripts in `scripts/build/` are present but still under development; verify their output before
+publishing a build.
 
 ## Adding or editing a theme
 
@@ -85,15 +90,19 @@ colorv/other.css
 colorv/text.css
 ```
 
-Keep names lowercase and consistent with the existing theme directories. Check the result in the relevant pages under `tests/themes/`, and update the documentation when adding a new supported workflow.
+Keep names lowercase and consistent with the existing theme directories. Check the result in the relevant pages under
+`tests/themes/`, and update the documentation when adding a new supported workflow.
 
 ## Project status
 
-This project is actively being organized. Some setup, build, and import/export helpers are prototypes rather than a stable release pipeline. If a command does not work as expected, please include the command, operating system, and full error output in an issue.
+This project is actively being organized. Some setup, build, and import/export helpers are prototypes rather than a
+stable release pipeline. If a command does not work as expected, please include the command, operating system, and full
+error output in an issue.
 
 ## Contributing
 
-Bug reports, theme improvements, documentation fixes, and small focused features are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
+Bug reports, theme improvements, documentation fixes, and small focused features are welcome.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
 ## License
 

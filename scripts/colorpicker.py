@@ -19,7 +19,6 @@ from PyQt6.QtWidgets import (
     QWidget,
 )
 
-
 ROOT_DIR = Path(__file__).resolve().parent.parent
 COLOR_PATTERN = re.compile(
     r"^\s*--([\w-]+)\s*:\s*(#[0-9a-fA-F]{6})\b", re.MULTILINE

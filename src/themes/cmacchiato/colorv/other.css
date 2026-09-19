@@ -1,7 +1,7 @@
 body {
-  background-color: var(--base);
+    background-color: var(--base);
 }
 
 hr {
-  border-color: var(--rosewater);
+    border-color: var(--rosewater);
 }

@@ -1,32 +1,32 @@
 h1, dt {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 h2, h3, h4, h5, h6, dd, table, form, details {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 p, blockquote, pre, ul, ol, summary {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 mark {
-  color: var(--yellow);
-  opacity: 75%;
+    color: var(--yellow);
+    opacity: 75%;
 }
 
 del {
-  color: var(--red);
+    color: var(--red);
 }
 
 strong {
-  color: var(--foreground);
+    color: var(--foreground);
 }
 
 code {
-  color: var(--green);
+    color: var(--green);
 }
 
 th {
-  color: var(--current-line);
+    color: var(--current-line);
 }
