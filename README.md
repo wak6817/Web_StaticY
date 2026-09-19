@@ -97,4 +97,4 @@ Bug reports, theme improvements, documentation fixes, and small focused features
 
 ## License
 
-This project is distributed under the MIT License. See [LICENSE](LICENSE).
+This project is distributed under the MIT License. See [license](LICENSE).

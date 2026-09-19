@@ -201,6 +201,8 @@ EOF
         echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
     fi
 
+  git init
+
     printf "\nThis could take a few seconds!\n"
 else
     printf '%s\n' "Abort"
