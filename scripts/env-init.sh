@@ -31,7 +31,7 @@ done
 printf '%s' "Are you running this script in the project directory? (y/n) "
 if ! read -r answer; then
   printf '%s\n' "Could not read confirmation" >&2
-    xit 1
+    exit 1
 fi
 
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
@@ -173,37 +173,40 @@ EOF
     echo "Warning: source icons were not found; continuing without copying icons"
   fi
 
-    mkdir -p scripts
-    echo "Generated scripts/"
+  mkdir -p scripts
+  echo "Generated scripts/"
 
-    cat > scripts/run.sh <<'EOF'
+  cat > scripts/run.sh <<'EOF'
 #!/bin/sh
 set -eu
 cp -R src assets scripts page dist/
 EOF
 
-    echo "Generated scripts/run.sh"
+  echo "Generated scripts/run.sh"
 
-    mkdir -p page
-    touch page/index.html page/style.css page/script.ts
-    echo "Generated page/"
+  mkdir -p page
+  touch page/index.html page/style.css page/script.ts
+  echo "Generated page/"
 
-    mkdir -p dist
-    echo "Generated dist/"
+  mkdir -p dist
+  echo "Generated dist/"
 
-    if command -v npm >/dev/null 2>&1; then
-      npm init -y
-      npm install --save-dev typescript
+  if command -v npm >/dev/null 2>&1; then
+    npm init -y
+    npm install --save-dev typescript
 
-      echo "Installed TypeScript using npm"
-    else
-      echo "Warning: npm was not found."
-      echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
-    fi
+    echo "Installed TypeScript using npm"
+  else
+    echo "Warning: npm was not found."
+    echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
+  fi
+
+  python3 -m venv .venv
+  python3 -m pip install --upgrade pip
+  echo "Generated and updated Python environment"
 
   git init
-
-
+  echo "Initialized Git"
 
   printf "\nThis could take a few seconds!\n"
 else
