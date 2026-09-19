@@ -99,6 +99,9 @@ This project is actively being organized. Some setup, build, and import/export h
 stable release pipeline. If a command does not work as expected, please include the command, operating system, and full
 error output in an issue.
 
+Updating the color schemes will not be a priority when developing this project,
+I will focus on the SSG first and then I'll add / edit the colorschemes.
+
 ## Contributing
 
 Bug reports, theme improvements, documentation fixes, and small focused features are welcome.
