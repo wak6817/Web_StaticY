@@ -1,0 +1,40 @@
+body {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header,
+main {
+    display: grid;
+    gap: 1rem;
+}
+
+section {
+    display: grid;
+    gap: 0.75rem;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+label {
+    color: var(--subtext1);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    border: 1px solid var(--surface2);
+    padding: 0.75rem;
+    text-align: left;
+}

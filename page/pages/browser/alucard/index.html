@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="/dist/themes/alucard/trans.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/modernv/fonts.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/modernv/margins.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/colorv/text.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/colorv/other.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/colorv/interactions.css" rel="stylesheet">
+    <link href="/dist/themes/alucard/api.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+    <title>Alucard</title>
+</head>
+<body>
+<header>
+    <p><a href="../index.html">Back to color scheme browser</a></p>
+    <h1>Alucard</h1>
+    <p>A test page for the built alucard theme.</p>
+</header>
+<hr>
+<main>
+    <section aria-labelledby="headings-title">
+        <h2 id="headings-title">Text and status</h2>
+        <h3>Heading three</h3>
+        <p>This paragraph checks the built text colors and the theme font.</p>
+        <p><strong>Strong text</strong>,
+            <mark>highlighted text</mark>
+            , and
+            <del>deleted text</del>
+            .
+        </p>
+        <p class="success">Success message</p>
+        <p class="info">Info message</p>
+        <p class="warning">Warning message</p>
+        <p class="error">Error message</p>
+        <p><code>const theme = "alucard";</code></p>
+    </section>
+    <hr>
+    <section aria-labelledby="controls-title">
+        <h2 id="controls-title">Controls</h2>
+        <p><a href="https://github.com/wak6817/Web_StaticY">Project link</a></p>
+        <button type="button">Button</button>
+        <button disabled type="button">Disabled button</button>
+        <label for="theme-name">Theme name</label>
+        <input id="theme-name" type="text" value="alucard">
+        <label for="theme-version">Version</label>
+        <select id="theme-version">
+            <option>modernv</option>
+            <option>pixelv</option>
+            <option>colorv</option>
+        </select>
+        <label for="theme-notes">Notes</label>
+        <textarea id="theme-notes" rows="3">Try the controls.</textarea>
+    </section>
+    <hr>
+    <section aria-labelledby="content-title">
+        <h2 id="content-title">Content elements</h2>
+        <blockquote>Theme previews should make each component easy to inspect.</blockquote>
+        <details>
+            <summary>Open details</summary>
+            <p>This content checks the summary and details colors.</p>
+        </details>
+        <ul>
+            <li>Unordered list item</li>
+            <li>Another list item</li>
+        </ul>
+        <ol>
+            <li>First ordered item</li>
+            <li>Second ordered item</li>
+        </ol>
+        <table>
+            <thead>
+            <tr>
+                <th>Token</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>base</td>
+                <td>var(--base)</td>
+            </tr>
+            <tr>
+                <td>mauve</td>
+                <td>var(--mauve)</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
