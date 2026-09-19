@@ -11,14 +11,16 @@ if ! read -r answer; then
 fi
 
 USERNAME=$answer
-
 YEAR=$(date +%Y)
 
-SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd -P)
 PROJECT_DIR=$(pwd -P)
+
 DESTINATION_ICON_DIR="$PROJECT_DIR/assets/icons"
+DESTINATION_SOUND_DIR="$PROJECT_DIR/assets/sounds"
+
 SOURCE_ICON_DIR=""
-SEARCH_DIR="$SCRIPT_DIR"
+SOURCE_SOUND_DIR=""
+SEARCH_DIR="$PROJECT_DIR"
 
 while [ "$SEARCH_DIR" != "/" ]; do
   if [ -d "$SEARCH_DIR/assets/icons" ]; then
@@ -171,6 +173,20 @@ EOF
     fi
   else
     echo "Warning: source icons were not found; continuing without copying icons"
+  fi
+
+  if [ -n "$SOURCE_SOUND_DIR" ] && [ -d "$SOURCE_SOUND_DIR" ]; then
+    SOURCE_SOUND_PATH=$(cd -- "$SOURCE_SOUND_DIR" && pwd -P)
+    DESTINATION_SOUND_PATH=$(cd -- "$DESTINATION_SOUND_DIR" && pwd -P)
+
+    if [ "$SOURCE_SOUND_PATH" = "$DESTINATION_SOUND_PATH" ]; then
+      echo "Sounds already exist in the project directory"
+    else
+      cp -R "$SOURCE_SOUND_PATH"/. "$DESTINATION_SOUND_PATH"/
+      echo "Copied sounds"
+    fi
+  else
+    echo "Warning: source sounds were not found; continuing without copying sounds"
   fi
 
   mkdir -p scripts
