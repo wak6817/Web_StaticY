@@ -21,23 +21,23 @@ SOURCE_ICON_DIR=""
 SEARCH_DIR="$SCRIPT_DIR"
 
 while [ "$SEARCH_DIR" != "/" ]; do
-    if [ -d "$SEARCH_DIR/assets/icons" ]; then
-        SOURCE_ICON_DIR="$SEARCH_DIR/assets/icons"
-        break
-    fi
-    SEARCH_DIR=$(dirname -- "$SEARCH_DIR")
+  if [ -d "$SEARCH_DIR/assets/icons" ]; then
+    SOURCE_ICON_DIR="$SEARCH_DIR/assets/icons"
+    break
+  fi
+  SEARCH_DIR=$(dirname -- "$SEARCH_DIR")
 done
 
 printf '%s' "Are you running this script in the project directory? (y/n) "
 if ! read -r answer; then
-    printf '%s\n' "Could not read confirmation" >&2
-    exit 1
+  printf '%s\n' "Could not read confirmation" >&2
+    xit 1
 fi
 
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
-    echo "Continue"
+  echo "Continue"
 
-    cat > README.md <<'EOF'
+  cat > README.md <<'EOF'
 # THIS README.MD IS GENERATED
 
 This project is a small starting point for building a static website with HTML, CSS, and TypeScript.
@@ -119,9 +119,9 @@ The generated `.gitignore` excludes macOS `.DS_Store` files. Add other machine-s
 Try adding navigation, a second HTML page, responsive styles, and a small TypeScript interaction. Keep the site accessible by using semantic HTML, descriptive link text, keyboard-friendly controls, and readable color contrast.
 EOF
 
-    echo "Generated README.md"
+  echo "Generated README.md"
 
-    cat > LICENSE <<EOF
+  cat > LICENSE <<EOF
 MIT License
 
 Copyright (c) $YEAR $USERNAME
@@ -145,33 +145,33 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 EOF
 
-    echo "Generated LICENSE"
+  echo "Generated LICENSE"
 
-    cat > .gitignore <<EOF
+  cat > .gitignore <<EOF
 .DS_Store
 EOF
 
-    echo "Generated .gitignore"
+  echo "Generated .gitignore"
 
-    mkdir -p src
-    echo "Generated src/"
+  mkdir -p src
+  echo "Generated src/"
 
-    mkdir -p assets/fonts assets/icons assets/sounds
-    echo "Generated assets/"
+  mkdir -p assets/fonts assets/icons assets/sounds
+  echo "Generated assets/"
 
-    if [ -n "$SOURCE_ICON_DIR" ] && [ -d "$SOURCE_ICON_DIR" ]; then
-        SOURCE_ICON_PATH=$(cd -- "$SOURCE_ICON_DIR" && pwd -P)
-        DESTINATION_ICON_PATH=$(cd -- "$DESTINATION_ICON_DIR" && pwd -P)
+  if [ -n "$SOURCE_ICON_DIR" ] && [ -d "$SOURCE_ICON_DIR" ]; then
+    SOURCE_ICON_PATH=$(cd -- "$SOURCE_ICON_DIR" && pwd -P)
+    DESTINATION_ICON_PATH=$(cd -- "$DESTINATION_ICON_DIR" && pwd -P)
 
-        if [ "$SOURCE_ICON_PATH" = "$DESTINATION_ICON_PATH" ]; then
-            echo "Icons already exist in the project directory"
-        else
-            cp -R "$SOURCE_ICON_PATH"/. "$DESTINATION_ICON_PATH"/
-            echo "Copied icons"
-        fi
+    if [ "$SOURCE_ICON_PATH" = "$DESTINATION_ICON_PATH" ]; then
+      echo "Icons already exist in the project directory"
     else
-        echo "Warning: source icons were not found; continuing without copying icons."
+      cp -R "$SOURCE_ICON_PATH"/. "$DESTINATION_ICON_PATH"/
+      echo "Copied icons"
     fi
+  else
+    echo "Warning: source icons were not found; continuing without copying icons"
+  fi
 
     mkdir -p scripts
     echo "Generated scripts/"
@@ -192,18 +192,20 @@ EOF
     echo "Generated dist/"
 
     if command -v npm >/dev/null 2>&1; then
-        npm init -y
-        npm install --save-dev typescript
+      npm init -y
+      npm install --save-dev typescript
 
-        echo "Installed TypeScript using npm"
+      echo "Installed TypeScript using npm"
     else
-        echo "Warning: npm was not found."
-        echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
+      echo "Warning: npm was not found."
+      echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
     fi
 
   git init
 
-    printf "\nThis could take a few seconds!\n"
+
+
+  printf "\nThis could take a few seconds!\n"
 else
-    printf '%s\n' "Abort"
+  printf '%s\n' "Abort"
 fi

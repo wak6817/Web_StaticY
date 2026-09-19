@@ -2,8 +2,6 @@
 
 import shutil
 import sys
-from pathlib import Path
-
 
 def read_path(prompt: str) -> str:
     return input(prompt).strip()

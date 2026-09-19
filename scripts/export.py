@@ -4,7 +4,6 @@ import json
 import re
 from pathlib import Path
 
-
 COLOR_NAMES = [
     "rosewater", "flamingo", "pink", "mauve", "red", "maroon", "peach",
     "yellow", "green", "teal", "sky", "sapphire", "blue", "lavender",
@@ -44,9 +43,6 @@ def export_theme() -> None:
         return
 
     destination = input("where should exported.jsonc be saved? ").strip()
-    if not destination:
-        print("destination is required")
-        return
 
     css = read_file(Path("src") / colorscheme / "trans.css")
     if not css:
