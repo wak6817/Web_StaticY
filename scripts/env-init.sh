@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# Use printf for input
+# Use printf for getting input
 
 set -eu
 

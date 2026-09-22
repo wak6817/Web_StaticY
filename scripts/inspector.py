@@ -1,6 +1,6 @@
-from pathlib import Path
-from collections import Counter
 import subprocess
+from collections import Counter
+from pathlib import Path
 
 files = list(Path(".").rglob("*"))
 line_count = 0
