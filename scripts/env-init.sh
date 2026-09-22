@@ -777,6 +777,11 @@ for extension, count in extensions.most_common():
     print(f" {extension}\t{count}")
 EOF
 
+  cat > scripts/backup.sh <<'EOF'
+#!/bin/sh
+zip *
+EOF
+
   cat > scripts/run.sh <<'EOF'
 #!/bin/sh
 set -eu
