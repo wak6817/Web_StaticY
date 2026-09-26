@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: nbdmt
+Version: 0.3.0
+Requires-Python: >=3.14.7
+License-File: LICENSE
+Requires-Dist: textual>=8.2.8
+Dynamic: license-file

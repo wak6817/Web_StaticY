@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+src/cli/main.py
+src/nbdmt.egg-info/PKG-INFO
+src/nbdmt.egg-info/SOURCES.txt
+src/nbdmt.egg-info/dependency_links.txt
+src/nbdmt.egg-info/entry_points.txt
+src/nbdmt.egg-info/requires.txt
+src/nbdmt.egg-info/top_level.txt

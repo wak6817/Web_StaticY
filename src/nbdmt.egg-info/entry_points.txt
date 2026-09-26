@@ -1,0 +1,2 @@
+[console_scripts]
+nbdmt = cli.main:Main
