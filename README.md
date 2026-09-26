@@ -30,8 +30,8 @@ On Windows, use WSL or another POSIX-compatible environment for the shell script
 Clone the repository and enter its directory:
 
 ```sh
-git clone https://github.com/wak6817/Web_StaticY.git
-cd Web_StaticY
+git clone https://github.com/wak6817/NbDMt.git
+cd NbDMt
 ```
 
 Create or activate a Python environment, then install the Python dependencies with your preferred package manager. The

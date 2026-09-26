@@ -10,7 +10,7 @@ from textual.widgets import Button, Footer, Header, Label, RichLog, Select, Stat
 ROOT_DIR = Path(__file__).resolve().parent
 
 
-class WebStaticyApp(App):
+class NbDMtApp(App):
     TITLE = "Web StaticY Setup"
     SUB_TITLE = "Project Initialization"
 
@@ -55,7 +55,7 @@ class WebStaticyApp(App):
         yield Header()
 
         with Container(id="main"):
-            yield Label("Web_StaticY setup")
+            yield Label("NbDMt setup")
             yield Static(
                 "Choose your operating system, then run the setup steps."
             )
@@ -182,4 +182,4 @@ class WebStaticyApp(App):
 
 
 if __name__ == "__main__":
-    WebStaticyApp().run()
+    NbDMtApp().run()

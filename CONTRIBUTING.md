@@ -1,4 +1,4 @@
-# Contributing to Web_StaticY
+# Contributing to NbDMt
 
 Contributions can include bug reports, documentation, theme files, accessibility
 improvements, and focused code changes.
@@ -44,7 +44,7 @@ python scripts/colorpicker.py
   explicitly requires it.
 - Update `README.md` when a command, directory, or supported workflow changes.
 - After each commit, format the whole project using the .editorconfig.
-  In JetBrains editors right-click on Web_StaticY in the file tree and choose 'Reformat Code' and click on
+  In JetBrains editors right-click on NbDMt in the file tree and choose 'Reformat Code' and click on
   'Optimize imports', 'Rearrange entries' and 'Cleanup code'. After that click on 'Run' and commit and push your work!
 
 ## Commits and pull requests

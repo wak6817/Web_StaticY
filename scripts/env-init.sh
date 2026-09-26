@@ -804,7 +804,7 @@ EOF
     echo "Installed TypeScript using npm"
   else
     echo "Warning: npm was not found."
-    echo "Go to your Web_StaticY installation and run the scripts/download/<os-pkg>.sh script"
+    echo "Go to your NbDMt installation and run the scripts/download/<os-pkg>.sh script"
   fi
 
   python3 -m venv .venv
